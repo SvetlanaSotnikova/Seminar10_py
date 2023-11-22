@@ -9,7 +9,7 @@ random.shuffle(lst)
 data = pd.DataFrame({'whoAmI':lst})
 data.head()
 
-# попытка 1 без домениуса (все значения одинаковые, не получилось)
+# попытка 1 без думиеса (все значения одинаковые, не получилось)
 # one_hot_columns = pd.unique(data['whoAmI'])
 # one_hot = pd.DataFrame(0, columns=one_hot_columns, index=data.index)
 
@@ -19,7 +19,7 @@ data.head()
 # data = data.drop('whoAmI', axis=1)
 # print(data.head())
 
-# вторая попытка без домениуса (вроде получилось)
+# вторая попытка без думиеса (вроде получилось)
 unique_values = data['whoAmI'].unique()
 
 # Создание one-hot кодировки
@@ -31,7 +31,7 @@ data = data.drop('whoAmI', axis=1)
 print(data.head())
 
 
-# использоавние домениуса
+# использоавние думиеса
 # one_hot = pd.get_dummies(data['whoAmI']) # prefix='WhoAmI'
 # one_hot = one_hot.astype(int)
 # # Объединение исходного DataFrame с one-hot кодировкой
